@@ -20,6 +20,10 @@ app.add_middleware(
 ml_engine = MLEngine()
 stream = None
 
+@app.get("/")
+def root():
+    return {"message": "Welcome to SentinelPay API. Visit /docs for documentation."}
+
 @app.on_event("startup")
 async def startup_event():
     global stream
