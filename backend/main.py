@@ -24,6 +24,10 @@ stream = None
 def health_check():
     return {"status": "ok", "service": "SentinelPay Backend"}
 
+@app.get("/")
+def root():
+    return {"message": "Welcome to SentinelPay API. Visit /docs for documentation."}
+
 @app.on_event("startup")
 async def startup_event():
     global stream
