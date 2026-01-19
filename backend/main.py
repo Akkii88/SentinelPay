@@ -20,6 +20,10 @@ app.add_middleware(
 ml_engine = MLEngine()
 stream = None
 
+@app.get("/health")
+def health_check():
+    return {"status": "ok", "service": "SentinelPay Backend"}
+
 @app.on_event("startup")
 async def startup_event():
     global stream
