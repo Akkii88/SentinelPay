@@ -20,6 +20,10 @@ app.add_middleware(
 ml_engine = MLEngine()
 stream = None
 
+@app.get("/health")
+def health_check():
+    return {"status": "ok", "service": "SentinelPay Backend"}
+
 @app.get("/")
 def root():
     return {"message": "Welcome to SentinelPay API. Visit /docs for documentation."}
