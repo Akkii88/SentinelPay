@@ -1,0 +1,129 @@
+.live-feed-card {
+    padding: 0;
+    /* Remove padding to let table flush */
+    display: flex;
+    flex-direction: column;
+}
+
+.card-header {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-header h2 {
+    border-bottom: none;
+    margin: 0;
+    padding: 0;
+}
+
+.live-indicator {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--status-blocked);
+    /* Red for LIVE usually, or Green */
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    letter-spacing: 0.05em;
+}
+
+.live-indicator .status-dot {
+    background-color: var(--status-blocked);
+    /* Recording red */
+}
+
+.live-indicator .status-dot.active {
+    animation: pulse 1s infinite;
+}
+
+.table-container {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.txn-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.txn-table th {
+    text-align: left;
+    padding: 0.75rem 1rem;
+    background: var(--bg-secondary);
+    color: var(--text-muted);
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.txn-table td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-secondary);
+}
+
+.txn-row:hover {
+    background: rgba(255, 255, 255, 0.02);
+    /* Very subtle hover */
+}
+
+[data-theme="light"] .txn-row:hover {
+    background: rgba(0, 0, 0, 0.02);
+}
+
+/* Animations for new rows would be nice, but keep it simple for now */
+
+.risk-cell {
+    width: 120px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.risk-bar-container {
+    flex: 1;
+    height: 6px;
+    background: var(--bg-primary);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.risk-bar {
+    height: 100%;
+    border-radius: 3px;
+}
+
+.risk-value {
+    font-size: 0.8rem;
+    width: 25px;
+    text-align: right;
+    font-weight: bold;
+}
+
+.mono {
+    font-family: 'Roboto Mono', monospace;
+    letter-spacing: -0.5px;
+}
+
+.amount {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.location {
+    max-width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-muted);
+}

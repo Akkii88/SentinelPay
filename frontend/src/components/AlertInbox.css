@@ -1,0 +1,93 @@
+.alert-inbox-card {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-header-compact {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-header-compact h2 {
+    margin: 0;
+    border: none;
+    font-size: 1rem;
+}
+
+.badge-count {
+    background: var(--status-blocked);
+    color: white;
+    padding: 0.1rem 0.5rem;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.alert-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 0.5rem;
+}
+
+.alert-item {
+    padding: 1rem;
+    background: var(--bg-primary);
+    border: 1px solid transparent;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.alert-item:hover {
+    border-color: var(--border-color);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+.alert-item.selected {
+    border-color: var(--accent-secondary);
+    background: rgba(0, 188, 212, 0.05);
+    /* very subtle cyan tint */
+}
+
+.alert-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.alert-time {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.alert-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.alert-amount {
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.alert-scenario {
+    font-size: 0.8rem;
+    color: var(--status-flagged);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.empty-alerts {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-muted);
+}

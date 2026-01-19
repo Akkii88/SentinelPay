@@ -1,0 +1,280 @@
+/* Explainability */
+.explain-card.empty .empty-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: var(--text-muted);
+    text-align: center;
+}
+
+.icon-placeholder {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+}
+
+.explain-content {
+    padding-top: 1rem;
+}
+
+.explain-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.score-ring-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+.circular-chart {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.circle-bg {
+    fill: none;
+    stroke: var(--bg-primary);
+    stroke-width: 2.8;
+}
+
+.circle {
+    fill: none;
+    stroke-width: 2.8;
+    stroke-linecap: round;
+    transition: stroke-dasharray 0.5s ease;
+}
+
+.score-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.sc-val {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.sc-label {
+    font-size: 0.6rem;
+    color: var(--text-muted);
+}
+
+.decision-box .decision-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.decision-val {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--text-primary);
+}
+
+.decision-val.status-blocked {
+    color: var(--status-blocked);
+}
+
+.decision-val.status-flagged {
+    color: var(--status-flagged);
+}
+
+.decision-val.status-approved {
+    color: var(--status-approved);
+}
+
+.feature-list h4,
+.nlp-explanation h4,
+.pattern-content h4 {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+}
+
+.feature-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.fname {
+    width: 130px;
+    color: var(--text-secondary);
+}
+
+.fbar-container {
+    flex: 1;
+    height: 6px;
+    background: var(--bg-primary);
+    border-radius: 3px;
+    margin: 0 10px;
+    overflow: hidden;
+}
+
+.fbar {
+    height: 100%;
+    border-radius: 3px;
+}
+
+.fval {
+    width: 35px;
+    text-align: right;
+    font-weight: 600;
+}
+
+.nlp-explanation {
+    margin-top: 1.5rem;
+    background: var(--bg-primary);
+    padding: 1rem;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--text-secondary);
+}
+
+/* Pattern */
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.trend-badge {
+    color: var(--accent-secondary);
+    background: rgba(0, 188, 212, 0.1);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+}
+
+.sparkline-container {
+    height: 60px;
+    width: 100%;
+}
+
+.sparkline {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+.geo-pattern {
+    margin-top: 1.5rem;
+}
+
+.geo-item {
+    margin-bottom: 0.5rem;
+}
+
+.geo-item .label {
+    font-size: 0.85rem;
+    display: block;
+    margin-bottom: 0.25rem;
+    color: var(--text-secondary);
+}
+
+.geo-item .progress {
+    height: 6px;
+    background: var(--bg-primary);
+    border-radius: 3px;
+}
+
+.geo-item .progress div {
+    height: 100%;
+    background: var(--text-muted);
+    border-radius: 3px;
+}
+
+.geo-item.warning .progress div {
+    background: var(--status-flagged);
+}
+
+.geo-item.warning .flag {
+    float: right;
+    font-size: 0.7rem;
+    color: var(--status-flagged);
+    font-weight: bold;
+    margin-top: -15px;
+}
+
+/* AutoML */
+.automl-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.automl-header h2 {
+    margin: 0;
+    border: none;
+    padding: 0;
+}
+
+.automl-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.metric-box label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.metric-box .val {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.metric-box .highlighted {
+    color: var(--accent-primary);
+}
+
+.metric-box .text-sm {
+    font-size: 0.9rem;
+}
+
+.mini-timeline {
+    margin-top: 1.5rem;
+}
+
+.timeline-track {
+    height: 4px;
+    background: var(--bg-primary);
+    border-radius: 2px;
+    margin-bottom: 0.5rem;
+}
+
+.track-fill {
+    background: var(--status-approved);
+    height: 100%;
+    border-radius: 2px;
+}
+
+.timeline-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
